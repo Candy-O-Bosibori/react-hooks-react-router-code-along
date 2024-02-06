@@ -1,16 +1,14 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
+import App from "./components/App";
+// Step 1. Import react-router functions
 
-function Home() {
-  return (
-    <div>
-      <h1>Home!</h1>
-    </div>
-  );
-}
 
-function App() {
-  return <Home />;
-}
-
-ReactDOM.render(<App />, document.getElementById("root"));
+// Step 2. Change so router is coordinating what is displayed
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
